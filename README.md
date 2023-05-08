@@ -30,7 +30,7 @@ Our Model takes a clinical frontal view Chest X-ray as the input image. The Inst
 ## Tutorial
 ### Text Generation
 
-+ Process the original dataset and split the train, validation and test datasets and save them. \
++ Process the dataset and split the train, validation and test datasets and save them. \
 Run `python3 Image_Processing.py`
 ```Python
 Image_Processing.py
@@ -38,7 +38,8 @@ Image_Processing.py
 ```
 
 
-+ Training: Train the text generator on the training datast and evaluate on validation dataset during the training process. The final model will be finally evaluated on the test dataset. \
++ Training: Train the text generator on the training datast and evaluate on validation dataset during the training process. The model takes the original images and maksed images from image segmentation inputs, and generate text report as output.
+The final model will be finally evaluated on the test dataset. \
  Run `python3 Training.py`
 ```Python
 Training.py
