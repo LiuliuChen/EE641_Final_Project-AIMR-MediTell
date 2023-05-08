@@ -59,23 +59,25 @@ Predict_Findings.py
 
 + Training/Regeneration of Results and Synthesized Masked Images:
      Run `python3 Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.py`
+```Python
 
-    1) Download and install the libraries through the requirements.txt file.
+Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.py
 
-    2) Change the directory in the line below to your “saved_directory” where the zipped ChestXDet Dataset resides:
- 	    “get_ipython().system('unzip saved_directory/ChestXDet_Dataset.zip’)”
+# Download and install the libraries through the requirements.txt file.
 
-    3) Make sure that you have the metadata files, i.e. ‘ChestX_Det_train.json’ and ‘ChestX_Det_test.json’ in your “saved_directory”
+# Change the directory in the line below to your “saved_directory” where the zipped ChestXDet Dataset resides: “get_ipython().system('unzip saved_directory/ChestXDet_Dataset.zip’)”
 
-    4) Change the directory in the line below to your “saved_directory” where the zipped Indiana University Dataset resides as “images_normalized.zip”:
-	    “get_ipython().system('unzip saved_directory/images_normalized.zip’)”
+# Make sure that you have the metadata files, i.e. ‘ChestX_Det_train.json’ and ‘ChestX_Det_test.json’ in your “saved_directory”
 
-    5) Make sure that you have the metadata files, i.e. ‘indiana_images_info.csv’ in your “saved_directory”
+# Change the directory in the line below to your “saved_directory” where the zipped Indiana University Dataset resides as “images_normalized.zip”:
+“get_ipython().system('unzip saved_directory/images_normalized.zip’)”
 
-    6) Make sure the change the directories through which the files are read either via “json.open” or “pandas.read_csv” to “saved_directory/name_of_the_file_read”.
+# Make sure that you have the metadata files, i.e. ‘indiana_images_info.csv’ in your “saved_directory”
+
+# Make sure the change the directories through which the files are read either via “json.open” or “pandas.read_csv” to “saved_directory/name_of_the_file_read”.
 
 
-    7) Mount and Allow access to your Google Drive and create the following directories through your drive:
+# Mount and Allow access to your Google Drive and create the following directories through your drive:
         '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_1’
         '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_2’
         '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_3’
@@ -90,4 +92,5 @@ Predict_Findings.py
         ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_08_Threshold/’
         ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_Otsu_Threshold/’
 
-    8) After that feel free to reinitialize the training process after which you can regenerate the results for. Please kindly keep in mind that you need a GPU RAM Space of at least 40 GB as a requirement to go through the time-consuming training process. Otherwise, you need to change certain parameters such as the batch size during the training or the image sizes being fed to the models manually to be inline with your computational requirements. Also, please kindly refer to the "Trained_Model_Information.txt" on ways to access the pretrained model files.
+# After that feel free to reinitialize the training process after which you can regenerate the results for. Please kindly keep in mind that you need a GPU RAM Space of at least 40 GB as a requirement to go through the time-consuming training process. Otherwise, you need to change certain parameters such as the batch size during the training or the image sizes being fed to the models manually to be inline with your computational requirements. Also, please kindly refer to the "Trained_Model_Information.txt" on ways to access the pretrained model files.
+```
