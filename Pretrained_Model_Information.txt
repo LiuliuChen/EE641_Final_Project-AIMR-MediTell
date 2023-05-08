@@ -1,0 +1,64 @@
+The pretrained models in regards to the Instance Segmentation Pipeline through each epoch 
+under varying hyperparameter configurations can be accessed through the following public Google Drive links.
+
+Hyper_Setting_1 --> https://drive.google.com/drive/folders/1EZ6HSHUGOVZV2H55-3PFjJnPYWMGYudb?usp=sharing
+Hyper_Setting_1 Average Model Size--> 524.6 MB (w/ ADAM Optimizer leading to the relative increase in model size)
+
+Hyper_Setting_2 --> https://drive.google.com/drive/folders/1USjTFADvKhIrpJf5uWadI9mfMxHNOjK0?usp=sharing
+Hyper_Setting_2 Average Model Size--> 524.6 MB (w/ ADAM Optimizer leading to the relative increase in model size)
+
+Hyper_Setting_3 --> https://drive.google.com/drive/folders/1q4PIFewLE6vjzwv_JH3uYyBsp8JrVf_M?usp=sharing
+Hyper_Setting_3 Average Model Size--> 350.1 MB (w/ SGD with Momentum Optimizer leading to the relative decrease in model size)
+
+Best Performing & Robust to Overfitting Model --> https://drive.google.com/file/d/11xPJYlSeyxRbgz46kNbtF0d8KfMb0Zr7/view?usp=sharing
+Size of the Best Performing & Robust to Overfitting Model = 350.1 MB
+
+The following script can be used to load the optimal model:
+
+'''
+import torch
+import torchvision
+from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
+from torchvision.models.detection.mask_rcnn import MaskRCNNPredictor
+from torchvision.models.detection import MaskRCNN_ResNet50_FPN_V2_Weights
+
+def get_model_instance_segmentation(num_classes):
+
+    model = torchvision.models.detection.maskrcnn_resnet50_fpn_v2(weights=MaskRCNN_ResNet50_FPN_V2_Weights.DEFAULT)
+
+    in_features = model.roi_heads.box_predictor.cls_score.in_features
+    model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes)
+
+    in_features_mask = model.roi_heads.mask_predictor.conv5_mask.in_channels
+    hidden_layer = 256
+    model.roi_heads.mask_predictor = MaskRCNNPredictor(in_features_mask,
+                                                       hidden_layer,
+                                                       num_classes)
+    return model
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+PATH = '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_3/model_epoch_33.pth'
+# If Model is at another path, then: 
+#PATH = saved_model_path
+checkpoint = torch.load(PATH, map_location=device)
+model = get_model_instance_segmentation(num_classes)
+model = model.to(device)
+model.load_state_dict(checkpoint['model_state_dict'])
+'''
+
+The pretrained optimal model in regards to the Image-to-Explanatory Text Pipeline can be accessed through the following public Google Drive link.
+
+Optimal Image-to-Explanatory Text Model --> https://drive.google.com/file/d/1-K_hacCGFKimL98DQW6rvnBTvYXLxDuL/view?usp=sharing
+Size of the Optimal Image-to-Explanatory Text Model = 284.6 MB
+
+'''
+import torch
+
+# saved_model_path is the path to the model, i.e. .pth, file
+PATH = saved_model_path
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+checkpoint = torch.load(saved_model_path, map_location=device)
+encoder = checkpoint['encoder']
+decoder = checkpoint['decoder']
+'''
