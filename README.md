@@ -16,11 +16,11 @@ Our Model takes a clinical frontal view Chest X-ray as the input image. The Inst
         ├── Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.py
     ├── performance_log               # Includes evaluation and performance stats, e.g, loss curve, accuracy curve
     ├── sample_data                   # Sample data of models' inputs, outputs, e.g, masked RGB images
-    ├── Data_Loading.py               # Data Loading file
-    ├── Image_Processing.py           # Process the original datasets and generate train, validation and test datasets
+    ├── Data_Loading.py               # Data Loading files for text generation model
+    ├── Image_Processing.py           # Process the original datasets and generate train, validation and test datasets for text generation training
     ├── Text_Generate_Model.py        # Text generation model architecture: Encoder-Deconder with Attention
-    ├── Training.py                   # Training and test scripts
-    ├── Prediction.py                 # Predict the text finding based on given images on the trained model
+    ├── Training.py                   # Training and test scripts for text generation
+    ├── Predict_Findings.py           # Predict the text finding based on given images on the trained text generation model
     ├── utils.py                      # Helper functions such as plotting loss curve, saving checkpoints
     ├── Trained_Model_Information.txt # Accessing the Trained Models, Ways of Loading and File Sizes
     ├── requirements.txt              # environments and required python packages
@@ -56,9 +56,9 @@ Training.py
 ```
 
 + Prediction: Predict the findings based on given images on the trained_model after training., and plot the corresponding attention map. \
-     Run `python3 Prediction.py`
+     Run `python3 Predict_Findings.py`
 ```Python
-Prediction.py
+Predict_Findings.py
 # Change the image path in the main() function
 # Set plot_att_map = True to plot attention map
 ```
