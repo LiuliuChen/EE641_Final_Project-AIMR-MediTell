@@ -14,6 +14,8 @@ Our Model takes a clinical frontal view Chest X-ray as the input image. The Inst
     ├── image_segmentation_scripts    # Codes for training instance segmentation models and inferrence scripts
         ├── Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.ipynb
         ├── Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.py
+    ├── performance_log               # Includes evaluation and performance stats, e.g, loss curve, accuracy curve
+    ├── sample_data                   # Sample data of models' inputs, outputs, e.g, masked RGB images
     ├── Data_Loading.py               # Data Loading file
     ├── Image_Processing.py           # Process the original datasets and generate train, validation and test datasets
     ├── Text_Generate_Model.py        # Text generation model architecture: Encoder-Deconder with Attention
