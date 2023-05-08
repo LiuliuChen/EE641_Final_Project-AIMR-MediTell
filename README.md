@@ -99,6 +99,6 @@ resides as “images_normalized.zip”:
 # After that feel free to reinitialize the training process after which you can regenerate the results for. 
 Please kindly keep in mind that you need a GPU RAM Space of at least 40 GB as a requirement to go through 
 the time-consuming training process. Otherwise, you need to change certain parameters such as the batch size 
-during the training or the image sizes being fed to the models manually to be inline with your computational 
-requirements. Also, please kindly refer to the "Trained_Model_Information.txt" on ways to access the pretrained model files.
+during the training or the image sizes being fed to the models manually to be inline with your computational requirements. 
+Also, please kindly refer to the "Trained_Model_Information.txt" on ways to access the pretrained model files.
 ```
