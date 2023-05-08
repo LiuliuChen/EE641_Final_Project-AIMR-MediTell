@@ -66,14 +66,14 @@ Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Ou
 # Download and install the libraries through the requirements.txt file.
 
 # Change the directory in the line below to your “saved_directory” where the zipped ChestXDet Dataset 
-resides: “get_ipython().system('unzip saved_directory/ChestXDet_Dataset.zip’)”
+# resides: “get_ipython().system('unzip saved_directory/ChestXDet_Dataset.zip’)”
 
 # Make sure that you have the metadata files, i.e. ‘ChestX_Det_train.json’ and ‘ChestX_Det_test.json’ 
-in your “saved_directory”
+# in your “saved_directory”
 
 # Change the directory in the line below to your “saved_directory” where the zipped Indiana University Dataset
-resides as “images_normalized.zip”:
-“get_ipython().system('unzip saved_directory/images_normalized.zip’)”
+# resides as “images_normalized.zip”:
+# “get_ipython().system('unzip saved_directory/images_normalized.zip’)”
 
 # Make sure that you have the metadata files, i.e. ‘indiana_images_info.csv’ in your “saved_directory”
 
