@@ -11,7 +11,7 @@ Our Model takes a clinical frontal view Chest X-ray as the input image. The Inst
 ## File Structure 
 
     .
-    ├── image_segmentation            # Codes for training instance segmentation models and inferrence scripts
+    ├── image_segmentation_scripts    # Codes for training instance segmentation models and inferrence scripts
         ├── Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.ipynb
         ├── Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.py
     ├── Data_Loading.py               # Data Loading file
