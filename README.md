@@ -28,14 +28,6 @@ Our Model takes a clinical frontal view Chest X-ray as the input image. The Inst
 
 
 ## Tutorial
-### Image Segmentaion
-
-+ Get masked image from original dataset
-
-    Run the ``
-
-+ The 
-
 ### Text Generation
 
 + Process the original dataset and split the train, validation and test datasets and save them. \
@@ -62,3 +54,40 @@ Predict_Findings.py
 # Change the image path in the main() function
 # Set plot_att_map = True to plot attention map
 ```
+
+### Image Segmentation
+
++ Training/Regeneration of Results and Synthesized Masked Images:
+     Run `python3 Final_Version_Instance_Segmentation_with_a_Novel_Mask_RCNN_14_Classes_Without_Outputs.py`
+
+    1) Download and install the libraries through the requirements.txt file.
+
+    2) Change the directory in the line below to your “saved_directory” where the zipped ChestXDet Dataset resides:
+ 	    “get_ipython().system('unzip saved_directory/ChestXDet_Dataset.zip’)”
+
+    3) Make sure that you have the metadata files, i.e. ‘ChestX_Det_train.json’ and ‘ChestX_Det_test.json’ in your “saved_directory”
+
+    4) Change the directory in the line below to your “saved_directory” where the zipped Indiana University Dataset resides as “images_normalized.zip”:
+	    “get_ipython().system('unzip saved_directory/images_normalized.zip’)”
+
+    5) Make sure that you have the metadata files, i.e. ‘indiana_images_info.csv’ in your “saved_directory”
+
+    6) Make sure the change the directories through which the files are read either via “json.open” or “pandas.read_csv” to “saved_directory/name_of_the_file_read”.
+
+
+    7) Mount and Allow access to your Google Drive and create the following directories through your drive:
+        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_1’
+        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_2’
+        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_3’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_1/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_2/‘
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_3/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masked_Synthesized_Indiana_University_Dataset/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Non_Masked_Synthesized_Indiana_University_Dataset/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_05_Threshold/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_06_Threshold/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_07_Threshold/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_08_Threshold/’
+        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_Otsu_Threshold/’
+
+    8) After that feel free to reinitialize the training process after which you can regenerate the results for. Please kindly keep in mind that you need a GPU RAM Space of at least 40 GB as a requirement to go through the time-consuming training process. Otherwise, you need to change certain parameters such as the batch size during the training or the image sizes being fed to the models manually to be inline with your computational requirements. Also, please kindly refer to the "Trained_Model_Information.txt" on ways to access the pretrained model files.
