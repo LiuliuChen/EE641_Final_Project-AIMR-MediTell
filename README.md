@@ -78,27 +78,27 @@ resides as “images_normalized.zip”:
 # Make sure that you have the metadata files, i.e. ‘indiana_images_info.csv’ in your “saved_directory”
 
 # Make sure the change the directories through which the files are read either via “json.open” or 
-“pandas.read_csv” to “saved_directory/name_of_the_file_read”.
+# “pandas.read_csv” to “saved_directory/name_of_the_file_read”.
 
 
 # Mount and Allow access to your Google Drive and create the following directories through your drive:
-        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_1’
-        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_2’
-        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_3’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_1/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_2/‘
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_3/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masked_Synthesized_Indiana_University_Dataset/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Non_Masked_Synthesized_Indiana_University_Dataset/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_05_Threshold/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_06_Threshold/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_07_Threshold/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_08_Threshold/’
-        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_Otsu_Threshold/’
+#        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_1’
+#        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_2’
+#        '/content/drive/MyDrive/ee641/Project_Datasets/Model_Checkpoints_3’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_1/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_2/‘
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Images_Instance_Segmentation_3/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masked_Synthesized_Indiana_University_Dataset/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Non_Masked_Synthesized_Indiana_University_Dataset/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_05_Threshold/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_06_Threshold/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_07_Threshold/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_08_Threshold/’
+#        ‘/content/drive/MyDrive/ee641/Project_Datasets/Masking_Strategies_Best_Model_Otsu_Threshold/’
 
 # After that feel free to reinitialize the training process after which you can regenerate the results for. Please 
-kindly keep in mind that you need a GPU RAM Space of at least 40 GB as a requirement to go through the time-consuming 
-training process. Otherwise, you need to change certain parameters such as the batch size during the training or the 
-image sizes being fed to the models manually to be inline with your computational requirements. 
-Also, please kindly refer to the "Trained_Model_Information.txt" on ways to access the pretrained model files.
+# kindly keep in mind that you need a GPU RAM Space of at least 40 GB as a requirement to go through the time-consuming 
+# training process. Otherwise, you need to change certain parameters such as the batch size during the training or the 
+# image sizes being fed to the models manually to be inline with your computational requirements. 
+# Also, please kindly refer to the "Trained_Model_Information.txt" on ways to access the pretrained model files.
 ```
